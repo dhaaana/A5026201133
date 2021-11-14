@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tugas 1 - HTML/CSS</title>
+        <style>
+            body {
+                background-color: #c9ccd5;
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+            }
+            a {
+                text-decoration: none;
+                color: #2f374b;
+            }
+            a:visited {
+                text-decoration: none;
+                color: #2f374b;
+            }
+            a:hover {
+                color: #dde1ec;
+            }
+            img {
+                border-style: double;
+                border-color: #2f374b;
+            }
+            table,
+            th,
+            td {
+                text-align: center;
+                width: 55%;
+                border: 1px solid black;
+            }
+            th {
+                background-color: #9daccf;
+                color: #f4f4f5;
+            }
+            fieldset {
+                border-radius: 10px;
+            }
+            header {
+                width: 100%;
+                height: 65px;
+                padding: 1px;
+                background-color: #93b5c6;
+                box-shadow: 3px 3px 3px grey;
+                top: 0px;
+                position: fixed;
+                z-index: 10;
+            }
+            header nav {
+                float: right;
+                margin: 23px 25px;
+                font-weight: bold;
+            }
+            header h1 {
+                float: left;
+                margin: 8px 15px;
+                color: #eceef3;
+                text-shadow: 0px 3px #747986;
+            }
+            .container {
+                background-color: #f4f4f5;
+                box-shadow: 3px 3px 3px grey;
+                align-items: center;
+                width: 900px;
+                margin-left: 200px;
+                margin-bottom: 15px;
+                padding: 15px;
+                border-radius: 10px;
+            }
+            .film {
+                text-align: center;
+                margin: auto;
+                float: left;
+                width: 25%;
+            }
+            .film a {
+                background-color: #9daccf;
+                padding: 5px 10px;
+                border-radius: 5px;
+                position: relative;
+                right: 7px;
+            }
+            footer {
+                width: 100%;
+                height: 55px;
+                color: #2f374b;
+                background-color: #93b5c6;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Ramadhana Rizqy Arifin</h1>
+            <nav>
+                <a href="#">Email</a> |
+                <a
+                    href="http://linkedin.com/in/ramadhana-rizqy-arifin-867687219/"
+                    target="_blank"
+                    >LinkedIn</a
+                >
+                |
+                <a href="https://github.com/dhaaana" target="_blank">Github</a>
+                |
+            </nav>
+        </header>
+
+        <div class="main">
+            <div class="container">
+                <br /><br /><br />
+                <h2>Tentang Saya</h2>
+                <p>
+                    Halo nama saya Ramadhana Rizqy Arifin. Saat ini saya sedang
+                    menempuh semester tiga perkuliahan di Departemen Sistem
+                    Informasi Institut Teknologi Sepuluh Nopember. Saya memiliki
+                    <i>passion</i> di bidang teknologi dan ingin berfokus pada
+                    bidang pengembangan web. Saya adalah orang yang kreatif dan
+                    selalu mencari solusi alternatif dari persoalan yang
+                    dihadapi. Dengan pengetahuan terkait pemrogaman web dan
+                    kreativitas yang saya miliki, harapannya saya dapat membuat
+                    website yang menarik dan bermanfaat.
+                </p>
+            </div>
+
+            <div class="container">
+                <h2>Keterampilan</h2>
+                <p><b>Pemrogaman:</b></p>
+                <p>
+                    Sebagai mahasiswa Sistem Informasi, saya mencoba untuk
+                    mempelajari berbagai bahasa pemrogaman baik yang telah
+                    ditetapkan menjadi kurikulum dalam perkuliahan saya, maupun
+                    yang sekiranya akan berguna untuk menunjang karir saya
+                    kedepannya. Berikut adalah beberapa bahasa pemrogaman yang
+                    telah saya pelajari sejauh ini.
+                </p>
+                <ul>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ul>
+                <p><b>Aplikasi:</b></p>
+                <p>
+                    Selain mempelajari bahasa pemrogaman, saya juga mempelajari
+                    aplikasi-aplikasi dasar yang sangat dibutuhkan penggunaannya
+                    di berbagai bidang. Meskipun tidak seberapa, saya terus
+                    mencoba untuk mempelajari aplikasi lain yang dapat membantu
+                    saya dalam perkuliahan dan karir. Berikut adalah beberapa
+                    aplikasi yang telah saya pelajari sejauh ini.
+                </p>
+                <ul>
+                    <li>Microsoft Word</li>
+                    <li>Microsoft Excel</li>
+                    <li>Microsoft Powerpoint</li>
+                </ul>
+            </div>
+
+            <div class="container">
+                <h2>Perkuliahan</h2>
+                <p>
+                    Sebagai mahasiswa, saya tentunya juga melakukan kegiatan
+                    perkuliahan tiap harinya. kegiatan ini berupa mata
+                    kuliah-mata kuliah yang saya ambil untuk meningkatkan ilmu
+                    dan keterampilan saya. Pada tahun ini saya mengambil
+                    beberapa mata kuliah sesuai kurikulum, kemudian menambah
+                    lagi beberapa mata kuliah tambahan agar saya bisa lulus
+                    cepat. Berikut adalah beberapa mata kuliah yang saya ambil
+                    semester ini beserta kelasnya.
+                </p>
+                <div class="class-table">
+                    <table>
+                        <tr>
+                            <th>Mata Kuliah</th>
+                            <th>Kelas</th>
+                        </tr>
+                        <tr>
+                            <td>SBD</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>RKPL</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>PWeb</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>MPB</td>
+                            <td>C</td>
+                        </tr>
+                        <tr>
+                            <td>MProsti</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>RO</td>
+                            <td>C</td>
+                        </tr>
+                        <tr>
+                            <td>MLTI</td>
+                            <td>A</td>
+                        </tr>
+                    </table>
+                    <br />
+                    <form class="class-choice">
+                        <label for="class=class-choice"
+                            >Mata kuliah mana yang menjadi favoritmu?</label
+                        >
+                        <select id="class" name="class">
+                            <option value="sbd">SBD</option>
+                            <option value="rkpl">RKPL</option>
+                            <option value="pweb">PWeb</option>
+                            <option value="mpb">MPB</option>
+                            <option value="mprosti">MProsti</option>
+                            <option value="ro">RO</option>
+                            <option value="dmjk">DMJK</option>
+                            <option value="mlti">MLTI</option>
+                        </select>
+                        <button type="button" onclick="alert('Oke')">
+                            Kirim
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="container">
+                <h2>Minat</h2>
+                <p><b>Menonton Film</b></p>
+                <p>
+                    Jika tidak sedang belajar, mayoritas waktu luang saya
+                    biasanya saya gunakan untuk <i>refreshing</i>
+                    agar tidak jenuh. Pilihan kegiatan yang sering saya lakukan
+                    adalah menonton film. Berikut adalah beberapa film favorit
+                    saya.
+                </p>
+                <div class="films">
+                    <div class="film">
+                        <img
+                            src="https://i.pinimg.com/originals/3b/28/26/3b2826cf1654247050e5abf9f3ffff81.jpg"
+                            width="150px"
+                            height="200px"
+                        />
+                        <p>
+                            <a
+                                href="https://www.imdb.com/title/tt0266697/"
+                                target="_blank"
+                                ><b>Kill Bill</b></a
+                            >
+                        </p>
+                    </div>
+                    <div class="film">
+                        <img
+                            src="http://www.impawards.com/2007/posters/hot_fuzz_ver5.jpg"
+                            width="150px"
+                            height="200px"
+                        />
+                        <p>
+                            <a
+                                href="https://www.imdb.com/title/tt0425112/"
+                                target="_blank"
+                                ><b>Hot Fuzz</b></a
+                            >
+                        </p>
+                    </div>
+                    <div class="film">
+                        <img
+                            src="http://www.impawards.com/2014/posters/whiplash_ver4.jpg"
+                            width="150px"
+                            height="200px"
+                        />
+                        <p>
+                            <a
+                                href="https://www.imdb.com/title/tt2582802/"
+                                target="_blank"
+                                ><b>Whiplash</b></a
+                            >
+                        </p>
+                    </div>
+                    <div class="film">
+                        <img
+                            src="http://www.impawards.com/2017/posters/florida_project.jpg"
+                            width="150px"
+                            height="200px"
+                        />
+                        <p>
+                            <a
+                                href="https://www.imdb.com/title/tt5649144/"
+                                target="_blank"
+                                ><b>The Florida Project</b></a
+                            >
+                        </p>
+                    </div>
+                </div>
+                <p><b>Mendengarkan Musik</b></p>
+                <p>
+                    Selain menonton film, mendengarkan musik juga merupakan
+                    kegiatan pilihan saya untuk bersantai. Berikut adalah album
+                    yang sering saya dengarkan belakangan ini.
+                </p>
+                <div class="spotify">
+                    <iframe
+                        style="margin: auto"
+                        src="https://open.spotify.com/embed/album/0ETFjACtuP2ADo6LFhL6HN"
+                        width="300"
+                        height="380"
+                        frameborder="0"
+                        allowtransparency="true"
+                        allow="encrypted-media"
+                    ></iframe>
+                </div>
+            </div>
+
+            <div class="container">
+                <h2>Hubungi Saya</h2>
+                <form>
+                    <fieldset>
+                        <legend>Isi disini:</legend>
+                        <label>Nama Depan:</label><br />
+                        <input type="text" /><br />
+                        <label>Nama Belakang:</label><br />
+                        <input type="text" /><br />
+                        <label>Email:</label><br />
+                        <input type="text" /><br />
+                        <label>Pesan:</label><br />
+                        <textarea rows="5" cols="50"></textarea><br />
+                        <input type="submit" value="Kirim" />
+                    </fieldset>
+                </form>
+                <br />
+                <br />
+            </div>
+        </div>
+
+        <footer>
+            <hr />
+            <p style="text-align: center">Copyright 2021 © Dhana</p>
+        </footer>
+    </body>
+</html>

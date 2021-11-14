@@ -1,0 +1,13 @@
+.material-icons {
+  transition: 0.3s;
+}
+.material-icons:hover {
+  transform: scale(120%);
+}
+html {
+  scroll-behavior: smooth;
+}
+.dropdown-menu a:hover {
+  background-color: rgb(255, 241, 224);
+  border-radius: 3px;
+}
