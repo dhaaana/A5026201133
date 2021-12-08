@@ -1,19 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tabel Pendapatan</title>
-	<link rel="stylesheet" type="text/css" href="{{ asset('/css/app.css') }}">
-</head>
-<body>
+  @extends('layout.bahagia')
 
-	<div class="container">
-		<div class="card mt-3">
-			<div class="card-body">
+   @section('title', 'Tabel Data Pendapatan')
+   @section('judulhalaman', 'Daftar Pendapatan')
 
-				<h3 class="text-center">Nama Tabel: Pendapatan</h3>
+   @section('konten')
 
 
-				<a class="btn btn-primary mb-3" href="/pendapatan/tambah">Tambah Data Pendapatan</a>
+
+				<a class="btn btn-primary mb-3" href="/pendapatan/tambah"> + Tambah Data Pendapatan</a>
 
 
 				<br/>
@@ -35,16 +29,11 @@
                         <td>{{ $p->Tunjangan }}</td>
 						<td>
 							<a class="btn btn-warning btn-sm" href="/pendapatan/edit/{{ $p->ID }}">Edit</a>
+                            |
 							<a class="btn btn-danger btn-sm" href="/pendapatan/hapus/{{ $p->ID }}">Hapus</a>
 						</td>
 					</tr>
 					@endforeach
 				</table>
 
-			</div>
-		</div>
-	</div>
-
-
-</body>
-</html>
+    @endsection
