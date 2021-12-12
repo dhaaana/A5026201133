@@ -11,7 +11,12 @@ class AbsenController extends Controller
     public function indexabsen()
     {
         // mengambil data dari table absen
-        $absen = DB::table('absen')->get();
+        // $absen = DB::table('absen')->get();
+        $absen = DB::table('absen')
+       ->join('pegawai', 'absen.IDPegawai', '=', 'pegawai.pegawai_id')
+       ->select('absen.*', 'pegawai.pegawai_nama')
+       ->paginate(6);
+
 
         // mengirim data absen ke view indexabsen
         return view('absen.indexabsen', ['absen' => $absen]);
@@ -46,11 +51,23 @@ class AbsenController extends Controller
         // mengambil data dari table pegawai
         $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get(); //defaultnya urut Primary Key
 
-        $judul = "Hallo Apa kabar" ;
-
         // passing data absen yang didapat ke view update.blade.php
-        return view('absen.edit', ['absen' => $absen,'pegawai' => $pegawai , 'judul' => $judul]);
+        return view('absen.edit', ['absen' => $absen,'pegawai' => $pegawai]);
     }
+
+    public function detail($id)
+    {
+	    // mengambil data absen berdasarkan id yang dipilih
+	    $absen = DB::table('absen')
+        ->where('ID',$id)
+        ->join('pegawai', 'absen.IDPegawai', '=', 'pegawai.pegawai_id')
+        ->select('absen.*', 'pegawai.pegawai_nama', 'pegawai.pegawai_id')
+        ->get();
+	    // passing data absen yang didapat ke view edit.blade.php
+	    return view('absen.detail',['absen' => $absen]);
+
+    }
+
     // update data absen
     public function update(Request $request)
     {
@@ -73,4 +90,21 @@ class AbsenController extends Controller
         // alihkan halaman ke halaman absen
         return redirect('/absen');
     }
+
+    public function cari(Request $request)
+	{
+		// menangkap data pencarian
+		$cari = $request->cari;
+
+    	// mengambil data dari table absen sesuai pencarian data
+		$absen = DB::table('absen')
+        ->join('pegawai', 'absen.IDPegawai', '=', 'pegawai.pegawai_id')
+        ->where('pegawai_nama','like',"%".$cari."%")
+        ->select('absen.*', 'pegawai.pegawai_nama')
+		->paginate();
+
+    	// mengirim data minuman ke view index
+		return view('absen.indexabsen',['absen' => $absen]);
+
+	}
 }

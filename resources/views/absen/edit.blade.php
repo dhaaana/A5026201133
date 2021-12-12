@@ -38,12 +38,12 @@
 
                 <label for="status">Status: </label>
                 <div class="d-flex p-1">
-                    <input type="radio" id="html" name="status" value="I" @if ($a->Status === "I" ) checked="checked" @endif>
-                    <label for="html">Izin</label><br>
-                    <input type="radio" id="css" name="status" value="S"  @if ($a->Status === "S" ) checked="checked" @endif>
-                    <label for="css">Sakit</label><br>
-                    <input type="radio" id="javascript" name="status" value="A"  @if ($a->Status === "A" ) checked="checked" @endif>
-                    <label for="javascript">Alpha</label>
+                    <input type="radio" id="izin" name="status" value="I" @if ($a->Status === "I" ) checked="checked" @endif>
+                    <label for="izin">Izin</label><br>
+                    <input type="radio" id="sakit" name="status" value="S"  @if ($a->Status === "S" ) checked="checked" @endif>
+                    <label for="sakit">Sakit</label><br>
+                    <input type="radio" id="alpha" name="status" value="A"  @if ($a->Status === "A" ) checked="checked" @endif>
+                    <label for="alpha">Alpha</label>
                 </div>
                 <div class="d-flex justify-content-center">
                     <a class="btn btn-primary m-2" href="/absen"> Kembali</a>

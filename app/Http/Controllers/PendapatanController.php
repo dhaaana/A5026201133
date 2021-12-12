@@ -11,7 +11,10 @@ class PendapatanController extends Controller
     public function index()
     {
     	// mengambil data dari table pendapatan
-    	$pendapatan = DB::table('pendapatan')->get();
+    	$pendapatan = DB::table('pendapatan')
+        ->join('pegawai', 'pendapatan.IDPegawai', '=', 'pegawai.pegawai_id')
+        ->select('pendapatan.*', 'pegawai.pegawai_nama')
+        ->paginate(6);
 
     	// mengirim data pegawai ke view index
     	return view('pendapatan.index',['pendapatan' => $pendapatan]);
@@ -58,6 +61,19 @@ class PendapatanController extends Controller
 
     }
 
+    public function detail($id)
+    {
+	    // mengambil data pendapatan berdasarkan id yang dipilih
+	    $pendapatan = DB::table('pendapatan')
+        ->where('ID',$id)
+        ->join('pegawai', 'pendapatan.IDPegawai', '=', 'pegawai.pegawai_id')
+        ->select('pendapatan.*', 'pegawai.pegawai_nama', 'pegawai.pegawai_id')
+        ->get();
+	    // passing data pendapatan yang didapat ke view edit.blade.php
+	    return view('pendapatan.detail',['pendapatan' => $pendapatan]);
+
+    }
+
     // update data pendapatan
     public function update(Request $request)
     {
@@ -82,4 +98,23 @@ class PendapatanController extends Controller
         // alihkan halaman ke halaman pegawai
         return redirect('/pendapatan');
     }
+
+     public function cari(Request $request)
+	{
+		// menangkap data pencarian
+		$cari = $request->cari;
+
+    	// mengambil data dari table pendapatan sesuai pencarian data
+		$pendapatan = DB::table('pendapatan')
+        ->join('pegawai', 'pendapatan .IDPegawai', '=', 'pegawai.pegawai_id')
+        ->where('pegawai_nama','like',"%".$cari."%")
+        ->orWhere('Bulan', 'like', "%".$cari."%")
+        ->orWhere('Tahun', 'like', "%".$cari."%")
+        ->select('pendapatan.*', 'pegawai.pegawai_nama')
+		->paginate();
+
+    	// mengirim data pendapatan ke view index
+		return view('pendapatan.index',['pendapatan' => $pendapatan]);
+
+	}
 }
