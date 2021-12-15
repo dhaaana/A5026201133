@@ -43,6 +43,7 @@
                     <li><a href="/absen">Absen</a></li>
                     <li><a href="/pendapatan">Pendapatan</a></li>
                     <li><a href="/minuman">Minuman</a></li>
+                    <li><a href="/karyawan1">karyawan1 (EAS)</a></li>
                 </ul>
                 </div>
             </div>

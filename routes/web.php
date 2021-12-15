@@ -74,3 +74,9 @@ Route::post('/minuman/update','MinumanController@update');
 Route::get('/minuman/hapus/{id}','MinumanController@hapus');
 Route::get('/minuman/cari','MinumanController@cari');
 Route::get('/minuman/view/{id}','MinumanController@detail');
+
+//route CRUD tabel karyawan 1 - EAS (15 Desember 2021)
+Route::get('/karyawan1','Karyawan1Controller@index');
+Route::get('/karyawan1/edit/{id}','Karyawan1Controller@edit');
+Route::post('/karyawan1/update','Karyawan1Controller@update');
+Route::get('/karyawan1/view/{id}','Karyawan1Controller@detail');
